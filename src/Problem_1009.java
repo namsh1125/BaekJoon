@@ -1,12 +1,14 @@
+/*
+* 백준 1009번. 분산처리.
+* https://www.acmicpc.net/problem/1009
+* */
 import java.util.Scanner;
-//Todo: 한 번에 출력하게 작업
-
+//Todo: Fix Error
 public class Problem_1009 {
     public static void main(String[] args){
         int a;
         int b;
-        int n; //test case
-        int result;
+        int n; // test case
 
         Scanner s = new Scanner(System.in);
         n = s.nextInt();
@@ -15,15 +17,20 @@ public class Problem_1009 {
             a = s.nextInt();
             b = s.nextInt();
 
-            // 모든 숫자는 자신의 숫자를 여러번 곱하더라도 최대 4주기마다 똑같은 숫자가 반복된다
-            b = b % 4;
+            // 모든 숫자는 자신의 숫자를 여러 번 곱할 때 최대 4주기를 가진다.
+            // N^4와 N^0은 다르므로 4를 추가
+            b = b % 4 + 4;
 
-            // 결과 값 계산
-            result = (int)Math.pow(a, b)%10;
+            // 결과를 계산하고 저장
+            // 0번 컴퓨터는 없다. % 했을 때 0이면 10으로 바꿔주자.
+            int res = (int)Math.pow(a, b)%10;
+            if(res == 0)
+                System.out.println(10);
+            else
+                System.out.println(res);
 
-            // 결과 출력
-            System.out.println(result);
         }
+
     }
 
 }
