@@ -3,6 +3,7 @@
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=namsh1125)](https://solved.ac/namsh1125/)
 
 ### Achievement
+- 2023년 05월 04일 플래티넘 4 달성
 - 2023년 02월 14일 플래티넘 5 달성
 - 2023년 01월 24일 골드 1 달성
 - 2023년 01월 12일 골드 2 달성
